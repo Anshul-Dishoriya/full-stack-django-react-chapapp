@@ -19,31 +19,31 @@ server_list_docs = extend_schema(
     responses=ServerSerializer(many=True),  # Define the response schema
     parameters=[
         OpenApiParameter(
-            name='category',
+            name="category",
             type=OpenApiTypes.STR,
             location=OpenApiParameter.QUERY,
             description="Category of servers to retrieve",
         ),
         OpenApiParameter(
-            name='qty',
+            name="qty",
             type=OpenApiTypes.INT,
             location=OpenApiParameter.QUERY,
             description="Limit the number of servers returned",
         ),
         OpenApiParameter(
-            name='by_user',
+            name="by_user",
             type=OpenApiTypes.BOOL,
             location=OpenApiParameter.QUERY,
             description="Filter servers by the authenticated user (if provided)",
         ),
         OpenApiParameter(
-            name='by_serverid',
+            name="by_serverid",
             type=OpenApiTypes.INT,
             location=OpenApiParameter.QUERY,
             description="Filter servers by a specific server ID",
         ),
         OpenApiParameter(
-            name='with_num_members',
+            name="with_num_members",
             type=OpenApiTypes.BOOL,
             location=OpenApiParameter.QUERY,
             description="Include the number of members in the serialized data",
